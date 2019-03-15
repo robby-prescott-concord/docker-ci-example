@@ -1,1 +1,8 @@
+version: 0
 jobs:
+  build:
+    docker:
+      - image: circleci/python:3.6.2-stretch-browsers
+    steps:
+      - checkout
+      - run: pip install -r requirements/dev.txt
